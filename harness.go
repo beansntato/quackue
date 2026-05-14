@@ -1,6 +1,10 @@
 package quackue
 
-import "fmt"
+import (
+	"fmt"
+
+	wal "beansntato.dev/walrus"
+)
 
 type Quackue struct {
 }
@@ -11,4 +15,5 @@ func NewQuackue() *Quackue {
 
 func (q *Quackue) Run() {
 	fmt.Println("running...")
+	wal.New()
 }
